@@ -1,0 +1,31 @@
+<!-- Write a javascript code to request some data from the URI https://randomuser.me/api/?results=10 and
+output the JSON data response to console -->
+
+<!-- Retrieve JSON data from API using fetch() API -->
+<!-- Author: Elitsa Popova -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Random User Data</title>
+</head>
+
+<!-- Load data from randomuser.me API, print it in the web console and handle errors -->
+
+<body>
+    <p>Open the web console to view the data</p>
+    <script>
+        fetch('https://randomuser.me/api/?results=10').then(function(response) {
+            return response.json();
+        }).then(function(obj) {
+            console.log(obj);
+        }).catch(function(error) {
+            console.error('Error');
+            console.error(error);
+        });
+    </script>
+</body>
+
+</html>
